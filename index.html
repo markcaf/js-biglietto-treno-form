@@ -32,10 +32,10 @@ realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anc
 <body>
 
     <!-- TITOLO FORM -->
-    <section id="title-ticket">
+    <section id="title-ticket" class="mt-3">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col text-center text-uppercase text-white">
                     <h1>Calcola il prezzo del tuo biglietto</h1>
                 </div>
             </div>
@@ -43,22 +43,32 @@ realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anc
     </section>
 
     <!-- FORM -->
-    <section id="input-ticket">
-        <div class="container">
-            <div class="row">
-                <div class="col">
+    <section id="input-ticket" class="mt-3">
+        <div class="container bg-white rounded shadow-lg">
+            <div class="row text-center px-5">
+                <div class="col-4">
                     <div class="my-3">
-                        <label for="user-distance" class="form-label">Inserisci il numero di km da percorrere</label>
+                        <label for="user-name" class="form-label">Nome e Cognome</label>
+                        <input type="text" class="form-control" id="user-name">
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="my-3">
+                        <label for="user-distance" class="form-label">Km da percorrere</label>
                         <input type="text" class="form-control" id="user-distance">
                     </div>
+                </div>
 
+                <div class="col-4">
                     <div class="my-3">
                         <label for="user-age" class="form-label">Inserisci la tua età</label>
                         <input type="text" class="form-control" id="user-age">
                     </div>
+                </div>
 
-                    <a href="#" class="btn btn-primary" id="calc-button">Invia</a>
-
+                <div class="col-12 my-3">
+                    <a href="#" class="btn ms_button w-25 text-uppercase" id="calc-button">Genera</a>
                 </div>
             </div>
         </div>
@@ -68,7 +78,7 @@ realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anc
     <section id="your-ticket-title" class="mt-5">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col text-center text-uppercase text-white">
                     <h1>Il tuo biglietto</h1>
                 </div>
             </div>
@@ -76,15 +86,34 @@ realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anc
     </section>
 
     <section id="your-ticket">
-        <div class="container">
+        <div class="container bg-white">
             <div class="row">
-                <div class="col">
-                    <div class="user-distance-output">Distanza da percorrere: </div>
-                    <div class="user-age-output">Età: </div>
+                <div class="col py-2">
+                    <h4>DETTAGLIO PASSEGGERI</h4>
+                </div>
+            </div>
+            <div class="row row-cols-5 border-top border-bottom">
+                <div class="col pt-3 border pb-5 bg-light">
+                    <div class="user-name-output"><strong>Nome passeggero:</strong> <br></div>
+                    
+                </div>
+
+                <div class="col pt-3 border pb-5">
+                    <div class="user-distance-output"><strong>Distanza da percorrere:</strong> <br></div>
+                </div>
+
+                <div class="col pt-3 border pb-5">
+                    <div class="user-age-output"><strong>Età: </strong><br></div>
+                </div>
+
+                <div class="col pt-3 border pb-5">
                     <div >
-                        Sconto applicato: <span class="type-of-sale">Nessuno</span>
+                        <strong>Sconto applicato:</strong> <br><span class="type-of-sale">Nessuno</span>
                     </div>
-                    <div class="ticket-price">Prezzo del biglietto: </div>
+                </div>
+
+                <div class="col pt-3 border pb-5">
+                    <div class="ticket-price"><strong>Prezzo del biglietto:</strong> <br></div>
                 </div>
             </div>
         </div>
