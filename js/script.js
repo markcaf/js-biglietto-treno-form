@@ -14,8 +14,16 @@ calcButton.addEventListener("click", function()
 
         //Calcolo del prezzo del biglietto in base ai km
         let ticketPrice = 0.26 * userDistance;
-        ticketPrice = ticketPrice.toFixed(2);
-        console.log("Prezzo in base ai km: €" + ticketPrice);
 
+        //Sconti: 15% minorenne e 35% over 65
+        if (userAge < 18){
+            ticketPrice = ticketPrice - (ticketPrice * 15) / 100;
+            console.log("Sconto 15% per minorenni");
+        }   else if (userAge >= 65){
+                ticketPrice = ticketPrice - (ticketPrice * 35) / 100;
+                console.log("Sconto 35% per over65");
+            }
+        ticketPrice = ticketPrice.toFixed(2);
+        console.log("Prezzo finale: €" + ticketPrice);
     }
 )
