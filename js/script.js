@@ -6,6 +6,10 @@ const calcButton = document.querySelector("#calc-button");
 calcButton.addEventListener("click", function()
     {
         // Catturo i dati inseriti
+        console.log("Nome passeggero: " + document.getElementById("user-name").value);
+        const userName = document.getElementById("user-name").value;
+        document.querySelector(".user-name-output").innerHTML += userName;
+        
         console.log("Km da percorrere: " + document.getElementById("user-distance").value);
         const userDistance = parseInt(document.getElementById("user-distance").value);
         document.querySelector(".user-distance-output").innerHTML += userDistance +"km";
