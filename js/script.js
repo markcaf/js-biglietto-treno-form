@@ -1,20 +1,19 @@
 // Creo una variabile costante per il pulsante di invio
 // Creo due variabili let per la distanza in km e l'età
 const calcButton = document.querySelector("#calc-button");
-let userDistance = "";
-let userAge = "";
 
-// Catturo i dati inseriti negli input all'evento del click sul pulsante
+// All'evento del click sul pulsante
 calcButton.addEventListener("click", function()
     {
+        // Catturo i dati inseriti
         console.log("Km da percorrere: " + document.getElementById("user-distance").value);
-        userDistance = document.getElementById("user-distance").value;
-        userDistance = parseInt(userDistance);
-        console.log("variabile userDistance aggiornata: " + userDistance);
+        const userDistance = parseInt(document.getElementById("user-distance").value);
+        console.log("variabile userDistance creata: " + userDistance + "km");
 
         console.log("Età utente: " + document.getElementById("user-age").value);
-        userAge = document.getElementById("user-age").value;
-        userAge = parseInt(userAge);
-        console.log("variabile userAge aggiornata: " + userAge);
+        const userAge = parseInt(document.getElementById("user-age").value);
+        console.log("variabile userAge creata: " + userAge + " anni");
+
+        //Calcolo del prezzo del biglietto in base ai km
     }
 )
